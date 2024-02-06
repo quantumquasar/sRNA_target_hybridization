@@ -1,1 +1,1 @@
-Small-RNA target prediction by leveraging pulse and MAPS techniques, and RNA hybridization.
+Small-RNA target prediction by leveraging RNA hybridization using sequences from pulse and MAPS techniques in *Salmonella*. Sequences are filtered and passed through *IntaRNA* to predict hybridization models. 
