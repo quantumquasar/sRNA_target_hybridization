@@ -21,15 +21,12 @@ def load_MAPS(maps):
 #the param passed is a list variable
 #if there are multiple datasets it can be looped through
 #and each dataset can be loaded
-#
-#for now just the first element is retrieved
-#it's in start2.py, only the first element is passed on
 	print ("load MAPS")
 	#MAPS_SPI1_PinT= pd.read_csv('../DataFiles_PinT/MAPS/MAPS_SPI1_PinT.csv')
 	MAPS_SPI1_PinT= pd.read_csv(maps)
 	print (f"{MAPS_SPI1_PinT.head()}")
 
-	# Pick only iteresting columns
+	# Pick only interesting columns
 	MAPS_SPI1_PinT_v1 = MAPS_SPI1_PinT.copy()
 	MAPS_SPI1_PinT_v1 = MAPS_SPI1_PinT_v1[['Genome', 'Type', 'Start', 'End', 'Strand', 'Locus_tag',
        'Name', 'MS2-PinT_SPI-1_vs_PinT_SPI-1_log2FoldChange', 'MS2-PinT_SPI-1_vs_PinT_SPI-1_pvalue',
