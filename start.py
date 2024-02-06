@@ -4,29 +4,6 @@
 #file locations
 #formatting options
 
-#if __name__ == "__main__":
-#    parser = OptionParser()
-#    parser.add_option("-d", "--dir", dest="pwd", default="../data_files/")
-#    parser.add_option("-m", "--maps", dest="maps")
-#    parser.add_option("-p", "--pulse", dest="pulse")
-    #parser.add_option("-e", "--end", dest="end")
-    #parser.add_option("-n", "--normalize", dest="normalize",
-    #                  action="store_true", default=False)
-#    parser.add_option("-t", "--tempfile", dest="use_tempfile",
-#                      action="store_true", default=False)
-#    (options, args) = parser.parse_args()
-#    if len(args) not in [1, 2]:
-#        print ("Incorrect arguments")
-#        print (__doc__)
-#        sys.exit()
-#    kwargs = dict(
-#        pwd=options.pwd,
-#        maps=options.maps,# or 'all',
-#        pulse=options.pulse,# or 0,
-        #end=options.end,
-        #normalize=options.normalize,
-#        use_tempfile=options.use_tempfile)
-#    main(*args, **kwargs)
 
 from argparse import ArgumentParser
 import sys
@@ -62,25 +39,26 @@ args = parser.parse_args()
 
 #print(args)
 
-def query(question, default=None):
-    valid = {"yes": True, "y": True, "Y": True, "no": False, "n": False, "N": False}
-    if default is None:
-        prompt = " [y/n] "
-    elif default == "yes":
-        prompt = " [Y/n] "
-    elif default == "no":
-        prompt = " [y/N] "
-    else:
-        raise ValueError("invalid default answer: '%s'" % default)
-        
-    while True:
-        sys.stdout.write(question + prompt)
-        choice = input().lower()
-        if default is not None and choice == "":
-            return valid[default]
-        elif choice in valid:
-            return valid[choice]
-        else:
-            sys.stdout.write("Y/y/yes " "or 'y' or 'N/n/no'.\n")
-    
-query("Do you want to proceed?")
+#if __name__ == "__main__":
+#    parser = OptionParser()
+#    parser.add_option("-d", "--dir", dest="pwd", default="../data_files/")
+#    parser.add_option("-m", "--maps", dest="maps")
+#    parser.add_option("-p", "--pulse", dest="pulse")
+    #parser.add_option("-e", "--end", dest="end")
+    #parser.add_option("-n", "--normalize", dest="normalize",
+    #                  action="store_true", default=False)
+#    parser.add_option("-t", "--tempfile", dest="use_tempfile",
+#                      action="store_true", default=False)
+#    (options, args) = parser.parse_args()
+#    if len(args) not in [1, 2]:
+#        print ("Incorrect arguments")
+#        print (__doc__)
+#        sys.exit()
+#    kwargs = dict(
+#        pwd=options.pwd,
+#        maps=options.maps,# or 'all',
+#        pulse=options.pulse,# or 0,
+        #end=options.end,
+        #normalize=options.normalize,
+#        use_tempfile=options.use_tempfile)
+#    main(*args, **kwargs)
