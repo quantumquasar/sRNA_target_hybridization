@@ -46,5 +46,3 @@ def calc_pval(PinT_SPI1_MFE):
 #repeat for all the n-shuffles, ie, 256x32 shuffled sequences
 #concatenate them, summarize, calculate pvalues
 
-#use list.dir to get all shuffled intarna files
-#also have to save each of the files with p values
